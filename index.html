@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculator</title>
+    <meta name="description" content="Simple Calculator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header-container">
+                <h1>Calculator</h1>
+            </div>
+            <div class="first-row">
+                <input type="text" name="result" id="result" placeholder="Result" readonly />
+                <input type="button" value="C" onclick="result.value=''" id="clear-button" />
+            </div>
+            <div class="second-row">
+                <input type="button" value="1" onclick="live(1)" />
+                <input type="button" value="2" onclick="live(2)" />
+                <input type="button" value="3" onclick="live(3)" />
+                <input type="button" value="+" onclick="live('+')" />
+            </div>
+            <div class="third-row">
+                <input type="button" value="4" onclick=" live(4)" />
+                <input type="button" value="5" onclick=" live(5)" />
+                <input type="button" value="6" onclick=" live(6)" />
+                <input type="button" value="-" onclick="live('-')" />
+            </div>
+            <div class="fourth-row">
+                <input type="button" value="7" onclick="live(7)" />
+                <input type="button" value="8" onclick="live(8)" />
+                <input type="button" value="9" onclick=" live(9)" />
+                <input type="button" value="x" onclick="live('*')" />
+            </div>
+            <div class="fifth-row">
+                <input type="button" value="/" onclick="live('/')" />
+                <input type="button" value="0" onclick="live(0)" />
+                <input type="button" value="." onclick="live('.')" />
+                <input type="button" value="=" onclick="calc(result.value)" />
+            </div>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
