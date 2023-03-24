@@ -1,9 +1,10 @@
-const result = document.getElementById("resultult");
+const result = document.getElementById("result");
 
-document.addEventListener("keydown", key);
+document.addEventListener("keydown",keyboardInputHandler);
 
-function key(k) {
-    e.preventDefault();
+
+function keyboardInputHandler(k){
+    k.preventDefault();
 
     if (k.key === "0") {
         result.value += "0";
@@ -38,10 +39,10 @@ function key(k) {
     } else if (k.key === ".") {
         result.value += ".";
     } else if (k.key === "Enter") {
-        calculate(resultult.value);
+        calculate(result.value);
     } else if (k.key === "Backspace") {
-        const resultultInput = result.value;
-        result.value = resultultInput.substring(0, result.value.length - 1);
+        const resultInput = result.value;
+        result.value = resultInput.substring(0, result.value.length - 1);
     } else {
         window.alert("Only numbers are allowed");
     }
@@ -60,7 +61,7 @@ function calc(value) {
     if (isNaN(calAltVal)) {
         result.value = "Can't divide 0 with 0";
         setTimeout(() => {
-            resultult.value = "";
+            result.value = "";
         }, 1300);
     } else {
         result.value = calAltVal;
